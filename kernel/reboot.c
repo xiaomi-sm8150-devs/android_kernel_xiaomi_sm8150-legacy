@@ -221,6 +221,7 @@ void kernel_restart(char *cmd)
 	else
 		pr_emerg("Restarting system with command '%s'\n", cmd);
 	kmsg_dump(KMSG_DUMP_RESTART);
+	panic("boo");
 	machine_restart(cmd);
 }
 EXPORT_SYMBOL_GPL(kernel_restart);
